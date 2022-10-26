@@ -1,0 +1,5 @@
+az aks get-credentials -n aksdemo -g rg-aksdemo --admin
+nano deploy.yaml
+kubectl apply -f deploy.yaml
+kubectl get pods
+kubectl get services

@@ -1,0 +1,21 @@
+{
+  "scriptFile" : "../funcdemo-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.myfunc.Function.run",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "direction" : "in",
+    "name" : "req",
+    "methods" : [ "GET", "POST" ],
+    "authLevel" : "ANONYMOUS"
+  }, {
+    "type" : "queue",
+    "direction" : "out",
+    "name" : "msg",
+    "queueName" : "outqueue",
+    "connection" : "AzureWebJobsStorage"
+  }, {
+    "type" : "http",
+    "direction" : "out",
+    "name" : "$return"
+  } ]
+}

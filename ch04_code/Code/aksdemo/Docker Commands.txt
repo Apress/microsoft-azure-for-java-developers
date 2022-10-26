@@ -1,0 +1,6 @@
+docker build -t aksdemo:demo .
+docker image ls
+docker run --publish 8080:80 --detach --name aksdemo aksdemo:demo
+docker login acrdemo28.azurecr.io  
+docker tag aksdemo:demo acrdemo28.azurecr.io/aksdemo:demo
+docker push acrdemo28.azurecr.io/aksdemo:demo
